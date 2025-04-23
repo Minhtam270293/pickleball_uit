@@ -1,0 +1,52 @@
+[
+    {
+        "model": "guides.huongdanchoi",
+        "pk": 1,
+        "fields": {
+            "tieu_de": "Hướng dẫn cơ bản về Pickleball",
+            "nguoi_tao": 1,
+            "thoi_gian_tao": "2024-04-23T09:00:00Z",
+            "noi_dung": "Pickleball là môn thể thao kết hợp giữa tennis, cầu lông và bóng bàn. Môn thể thao này phù hợp với mọi lứa tuổi và dễ học.\n\nCác bước cơ bản:\n1. Cách cầm vợt\n2. Các kỹ thuật đánh bóng cơ bản\n3. Luật chơi cơ bản\n4. Chiến thuật đơn giản"
+        }
+    },
+    {
+        "model": "guides.huongdanchoi",
+        "pk": 2,
+        "fields": {
+            "tieu_de": "Luật chơi Pickleball",
+            "nguoi_tao": 2,
+            "thoi_gian_tao": "2024-04-23T09:30:00Z",
+            "noi_dung": "Luật chơi Pickleball bao gồm:\n\n1. Quy tắc giao bóng\n2. Quy tắc đánh bóng\n3. Quy tắc tính điểm\n4. Các lỗi thường gặp\n5. Cách xử lý các tình huống tranh chấp"
+        }
+    },
+    {
+        "model": "guides.huongdanchoi",
+        "pk": 3,
+        "fields": {
+            "tieu_de": "Kỹ thuật đánh bóng cơ bản",
+            "nguoi_tao": 3,
+            "thoi_gian_tao": "2024-04-23T10:00:00Z",
+            "noi_dung": "Các kỹ thuật đánh bóng cơ bản trong Pickleball:\n\n1. Kỹ thuật giao bóng\n2. Kỹ thuật đánh bóng forehand\n3. Kỹ thuật đánh bóng backhand\n4. Kỹ thuật volley\n5. Kỹ thuật smash"
+        }
+    },
+    {
+        "model": "guides.huongdanchoi",
+        "pk": 4,
+        "fields": {
+            "tieu_de": "Chiến thuật chơi Pickleball",
+            "nguoi_tao": 4,
+            "thoi_gian_tao": "2024-04-23T10:30:00Z",
+            "noi_dung": "Các chiến thuật chơi Pickleball hiệu quả:\n\n1. Chiến thuật tấn công\n2. Chiến thuật phòng thủ\n3. Chiến thuật đánh đôi\n4. Chiến thuật đánh đơn\n5. Cách phối hợp với đồng đội"
+        }
+    },
+    {
+        "model": "guides.huongdanchoi",
+        "pk": 5,
+        "fields": {
+            "tieu_de": "Cách chọn vợt và bóng Pickleball",
+            "nguoi_tao": 5,
+            "thoi_gian_tao": "2024-04-23T11:00:00Z",
+            "noi_dung": "Hướng dẫn chọn vợt và bóng Pickleball phù hợp:\n\n1. Các loại vợt và đặc điểm\n2. Cách chọn vợt phù hợp với trình độ\n3. Các loại bóng và đặc điểm\n4. Cách bảo quản vợt và bóng\n5. Các phụ kiện cần thiết"
+        }
+    }
+] 

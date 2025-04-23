@@ -1,0 +1,167 @@
+[
+    {
+        "model": "users.nguoidung",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "ho_ten": "Nguyễn Minh Tâm",
+            "so_dien_thoai": "0123456789",
+            "dia_chi": "Quận 1, TP.HCM",
+            "loai_nguoi_dung": "admin"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "ho_ten": "Trần Thị An",
+            "so_dien_thoai": "0123456780",
+            "dia_chi": "Quận 2, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "ho_ten": "Lê Văn Bình",
+            "so_dien_thoai": "0123456781",
+            "dia_chi": "Quận 3, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "ho_ten": "Phạm Văn Cường",
+            "so_dien_thoai": "0123456782",
+            "dia_chi": "Quận 4, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "ho_ten": "Nguyễn Thị Dung",
+            "so_dien_thoai": "0123456783",
+            "dia_chi": "Quận 5, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "ho_ten": "Trần Thị Em",
+            "so_dien_thoai": "0123456784",
+            "dia_chi": "Quận 6, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "ho_ten": "Lê Thị Giang",
+            "so_dien_thoai": "0123456785",
+            "dia_chi": "Quận 7, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 8,
+        "fields": {
+            "user": 8,
+            "ho_ten": "Phạm Văn Hải",
+            "so_dien_thoai": "0123456786",
+            "dia_chi": "Quận 8, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 9,
+        "fields": {
+            "user": 9,
+            "ho_ten": "Nguyễn Thị Ivy",
+            "so_dien_thoai": "0123456787",
+            "dia_chi": "Quận 9, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "ho_ten": "Trần Văn Khoa",
+            "so_dien_thoai": "0123456788",
+            "dia_chi": "Quận 10, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 11,
+        "fields": {
+            "user": 11,
+            "ho_ten": "Lê Thị Linh",
+            "so_dien_thoai": "0123456789",
+            "dia_chi": "Quận 11, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 12,
+        "fields": {
+            "user": 12,
+            "ho_ten": "Phạm Văn Minh",
+            "so_dien_thoai": "0123456790",
+            "dia_chi": "Quận 12, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 13,
+        "fields": {
+            "user": 13,
+            "ho_ten": "Nguyễn Thị Nga",
+            "so_dien_thoai": "0123456791",
+            "dia_chi": "Quận Bình Thạnh, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 14,
+        "fields": {
+            "user": 14,
+            "ho_ten": "Trần Thị Oanh",
+            "so_dien_thoai": "0123456792",
+            "dia_chi": "Quận Gò Vấp, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    },
+    {
+        "model": "users.nguoidung",
+        "pk": 15,
+        "fields": {
+            "user": 15,
+            "ho_ten": "Lê Văn Phúc",
+            "so_dien_thoai": "0123456793",
+            "dia_chi": "Quận Phú Nhuận, TP.HCM",
+            "loai_nguoi_dung": "user"
+        }
+    }
+] 

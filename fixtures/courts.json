@@ -1,0 +1,80 @@
+[
+    {
+        "model": "courts.sanchoi",
+        "pk": 1,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Quận 1",
+            "dia_diem": "Số 1, Đường Lê Lợi, Quận 1, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "150000.00",
+            "mo_ta": "Sân pickleball cao cấp với 4 sân tiêu chuẩn. Đặc biệt có phòng tắm nóng lạnh, phòng xông hơi, và phòng massage. Có bãi đậu xe hầm, quán cà phê sang trọng. Có đội ngũ huấn luyện viên chuyên nghiệp và trọng tài quốc tế.",
+            "so_san_con": 4
+        }
+    },
+    {
+        "model": "courts.sanchoi",
+        "pk": 2,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Quận 2",
+            "dia_diem": "Số 2, Đường Nguyễn Văn Hưởng, Quận 2, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "180000.00",
+            "mo_ta": "Sân pickleball hiện đại với 5 sân tiêu chuẩn. Có phòng tập gym, phòng yoga, và khu vực tập luyện thể lực. Có bãi đậu xe rộng rãi, quán nước và nhà hàng. Có huấn luyện viên chuyên về kỹ thuật nâng cao.",
+            "so_san_con": 5
+        }
+    },
+    {
+        "model": "courts.sanchoi",
+        "pk": 3,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Quận 3",
+            "dia_diem": "Số 3, Đường Võ Văn Tần, Quận 3, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "120000.00",
+            "mo_ta": "Sân pickleball với 3 sân tiêu chuẩn. Có khu vực tập luyện cơ bản, phòng thay đồ và nhà vệ sinh sạch sẽ. Có bãi đậu xe máy, quán nước nhỏ. Có huấn luyện viên hướng dẫn cho người mới bắt đầu.",
+            "so_san_con": 3
+        }
+    },
+    {
+        "model": "courts.sanchoi",
+        "pk": 4,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Quận 7",
+            "dia_diem": "Số 4, Đường Nguyễn Văn Linh, Quận 7, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "200000.00",
+            "mo_ta": "Sân pickleball cao cấp với 6 sân tiêu chuẩn. Có khu vực tập luyện chuyên nghiệp, phòng tập thể lực, và phòng phân tích kỹ thuật. Có bãi đậu xe rộng rãi, nhà hàng buffet, và khu vực thư giãn. Có đội ngũ huấn luyện viên quốc tế và trọng tài chuyên nghiệp.",
+            "so_san_con": 6
+        }
+    },
+    {
+        "model": "courts.sanchoi",
+        "pk": 5,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Bình Thạnh",
+            "dia_diem": "Số 5, Đường Bạch Đằng, Quận Bình Thạnh, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "130000.00",
+            "mo_ta": "Sân pickleball với 4 sân tiêu chuẩn. Có khu vực tập luyện đa năng, phòng thay đồ và nhà vệ sinh. Có bãi đậu xe máy, quán nước và khu vực nghỉ ngơi. Có huấn luyện viên hướng dẫn các kỹ thuật cơ bản và nâng cao.",
+            "so_san_con": 4
+        }
+    },
+    {
+        "model": "courts.sanchoi",
+        "pk": 6,
+        "fields": {
+            "ten_khu_vuc": "Sân Pickleball Gò Vấp",
+            "dia_diem": "Số 6, Đường Quang Trung, Quận Gò Vấp, TP.HCM",
+            "gio_mo_cua": "06:00:00",
+            "gio_dong_cua": "22:00:00",
+            "gia_thue_theo_gio": "140000.00",
+            "mo_ta": "Sân pickleball với 4 sân tiêu chuẩn. Có khu vực tập luyện gia đình, phòng thay đồ và nhà vệ sinh. Có bãi đậu xe máy, quán nước và khu vực vui chơi cho trẻ em. Có huấn luyện viên hướng dẫn cho mọi lứa tuổi.",
+            "so_san_con": 4
+        }
+    }
+] 
