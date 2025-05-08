@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'groups',
     'reviews',
     'guides',
+    'rest_framework',
+    'api'
 ]
 
 MIDDLEWARE = [

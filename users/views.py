@@ -1,36 +1,38 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from .models import NguoiDung
+
 import json
 
 # Create your views here.
 
-@require_http_methods(["GET"])
-def get_all_users(request):
-    try:
-        users = User.objects.all()
-        user_list = []
-        for user in users:
-            try:
-                profile = NguoiDung.objects.get(user=user)
-                user_list.append({
-                    'id': user.id,
-                    'username': user.username,
-                    'email': user.email,
-                    'ho_ten': profile.ho_ten,
-                    'so_dien_thoai': profile.so_dien_thoai,
-                    'dia_chi': profile.dia_chi,
-                    'loai_nguoi_dung': profile.loai_nguoi_dung
-                })
-            except NguoiDung.DoesNotExist:
-                continue
-        return JsonResponse({'users': user_list})
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=400)
+# @require_http_methods(["GET"])
+# def get_all_users(request):
+#     try:
+#         users = User.objects.all()
+#         user_list = []
+#         for user in users:
+#             try:
+#                 profile = NguoiDung.objects.get(user=user)
+#                 user_list.append({
+#                     'id': user.id,
+#                     'username': user.username,
+#                     'email': user.email,
+#                     'ho_ten': profile.ho_ten,
+#                     'so_dien_thoai': profile.so_dien_thoai,
+#                     'dia_chi': profile.dia_chi,
+#                     'loai_nguoi_dung': profile.loai_nguoi_dung
+#                 })
+#             except NguoiDung.DoesNotExist:
+#                 continue
+#         return JsonResponse({'users': user_list})
+#     except Exception as e:
+#         return JsonResponse({'error': str(e)}, status=400)
 
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -91,23 +93,23 @@ def user_login(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=400)
 
-@require_http_methods(["GET"])
-def user_profile(request, user_id):
-    try:
-        user = User.objects.get(id=user_id)
-        profile = NguoiDung.objects.get(user=user)
-        return JsonResponse({
-            'username': user.username,
-            'email': user.email,
-            'ho_ten': profile.ho_ten,
-            'so_dien_thoai': profile.so_dien_thoai,
-            'dia_chi': profile.dia_chi,
-            'loai_nguoi_dung': profile.loai_nguoi_dung
-        })
-    except User.DoesNotExist:
-        return JsonResponse({'error': 'Người dùng không tồn tại'}, status=404)
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=400)
+# @require_http_methods(["GET"])
+# def user_profile(request, user_id):
+#     try:
+#         user = User.objects.get(id=user_id)
+#         profile = NguoiDung.objects.get(user=user)
+#         return JsonResponse({
+#             'username': user.username,
+#             'email': user.email,
+#             'ho_ten': profile.ho_ten,
+#             'so_dien_thoai': profile.so_dien_thoai,
+#             'dia_chi': profile.dia_chi,
+#             'loai_nguoi_dung': profile.loai_nguoi_dung
+#         })
+#     except User.DoesNotExist:
+#         return JsonResponse({'error': 'Người dùng không tồn tại'}, status=404)
+#     except Exception as e:
+#         return JsonResponse({'error': str(e)}, status=400)
 
 @csrf_exempt
 @require_http_methods(["PATCH"])
