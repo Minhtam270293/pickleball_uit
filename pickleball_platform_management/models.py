@@ -57,7 +57,7 @@ class DanhGiaSan(models.Model):
     nguoi_dung_id = models.ForeignKey('NguoiDung', on_delete=models.CASCADE, related_name='danh_gias')
 
     def __str__(self):
-        return f"{self.san.ten_san} - {self.nguoi_dung.ho_ten} ({self.diem}★)"
+        return f"{self.san_id.ten_san} - {self.nguoi_dung_id.ho_ten} ({self.diem}★)"
     
 class HuongDan(models.Model):
     tieu_de = models.CharField(max_length=200)
