@@ -1,42 +1,42 @@
 # UIT Pickleball API
 
-This project is a Django REST Framework backend for managing users, courts, reviews, and guides for pickleball at UIT.
+Dự án này là một backend Django REST Framework để quản lý người dùng, sân, đánh giá và hướng dẫn của website liên quan đến pickleball.
 
-## Getting Started
+## Bắt đầu
 
-### 1. Clone the repository
+### 1. Clone repository
 
 ```sh
 git clone <your-repo-url>
 cd UIT_pickleball
 ```
 
-### 2. Install dependencies
+### 2. Cài đặt phụ thuộc
 
-It’s recommended to use a virtual environment:
+Nên sử dụng môi trường ảo:
 
 ```sh
 python -m venv venv
-venv\Scripts\activate  # On Windows
-# source venv/bin/activate  # On Mac/Linux
+venv\Scripts\activate  # Trên Windows
+# source venv/bin/activate  # Trên Mac/Linux
 
 pip install -r requirements.txt
 ```
 
-### 3. Run migrations
+### 3. Chạy migrations
 
 ```sh
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 4. Create a superuser (for admin access)
+### 4. Tạo superuser (quản trị viên)
 
 ```sh
 python manage.py createsuperuser
 ```
 
-### 5. Start the development server
+### 5. Khởi động server
 
 ```sh
 python manage.py runserver
@@ -44,22 +44,24 @@ python manage.py runserver
 
 ---
 
-## API Endpoints
+## Các endpoint API
 
 - **Người dùng:** `/api/users/`
 - **Sân:** `/api/courts/`
 - **Đánh giá sân:** `/api/reviews/`
 - **Hướng dẫn:** `/api/guides/`
+- **Đặt sân:** `/api/bookings/`
+- **Tính doanh thu tất cả sân:** `/api/courts/revenue/`
 
-You can access the browsable API at [http://127.0.0.1:8000/api/](http://127.0.0.1:8000/api/).
+Bạn có thể truy cập API giao diện web tại [http://127.0.0.1:8000/api/](http://127.0.0.1:8000/api/).
 
 ---
 
-## Testing the API
+## Kiểm thử API
 
-You can use the browsable API in your browser, or tools like [Postman](https://www.postman.com/) or `curl`.
+Bạn có thể sử dụng giao diện web, hoặc các công cụ như [Postman](https://www.postman.com/) hoặc `curl`.
 
-### Example: Create a new court
+### Ví dụ: Tạo sân mới
 
 ```json
 POST /api/courts/
@@ -74,7 +76,7 @@ POST /api/courts/
 }
 ```
 
-### Example: Create a new review
+### Ví dụ: Tạo đánh giá mới
 
 ```json
 POST /api/reviews/
@@ -86,7 +88,7 @@ POST /api/reviews/
 }
 ```
 
-### Example: Create a new guide
+### Ví dụ: Tạo hướng dẫn mới
 
 ```json
 POST /api/guides/
@@ -98,20 +100,62 @@ POST /api/guides/
 }
 ```
 
+### Ví dụ: Đặt sân mới
+
+```json
+POST /api/bookings/
+{
+  "thoi_gian_bat_dau": "09:00",
+  "thoi_gian_ket_thuc": "11:00",
+  "san_id": 1,
+  "nguoi_dung_id": 1,
+  "so_luong_san": 1
+}
+```
+
+### Ví dụ: Tính doanh thu tất cả sân
+
+```json
+GET /api/courts/revenue/
+```
+
+_Phản hồi:_
+
+```json
+[
+  {
+    "id": 1,
+    "ten_san": "Sân A",
+    "doanh_thu": "200000.00"
+  },
+  ...
+]
+```
+
 ---
 
-## Admin Panel
+## Trang quản trị
 
-Visit [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) and log in with your superuser credentials to manage all data.
-
----
-
-## Notes
-
-- All times should be in 24-hour format, e.g., `"08:00"`.
-- For `cap_do` in guides, valid choices are: `"de"`, `"trung binh"`, `"kho"`.
-- If you get validation errors, check the error message for required fields or invalid choices.
+Truy cập [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) và đăng nhập bằng tài khoản superuser để quản lý dữ liệu.
 
 ---
 
-Happy coding!
+## Ghi chú
+
+- Tất cả thời gian nên ở định dạng 24h, ví dụ: `"08:00"`.
+- Đối với `cap_do` trong hướng dẫn, các lựa chọn hợp lệ là: `"de"`, `"trung binh"`, `"kho"`.
+- Nếu gặp lỗi xác thực, hãy kiểm tra thông báo lỗi để biết trường nào thiếu hoặc giá trị không hợp lệ.
+
+---
+
+## Quy tắc & Ràng buộc nghiệp vụ
+
+- Người dùng chỉ được đánh giá sân mà họ đã từng đặt.
+- Thời gian đặt phải nằm trong giờ mở cửa và đóng cửa của sân.
+- Số lượng sân đặt không được vượt quá số sân còn lại.
+- Tổng tiền được tính toán tự động khi đặt sân.
+- Doanh thu các sân chỉ được cập nhật lại khi truy cập `/api/courts/revenue/`.
+- Số điện thoại phải là duy nhất và bắt đầu bằng 0, gồm 10–11 chữ số.
+- Độ khó hướng dẫn (`cap_do`) phải là `"de"`, `"trung binh"`, `"kho"` hoặc để trống.
+
+---

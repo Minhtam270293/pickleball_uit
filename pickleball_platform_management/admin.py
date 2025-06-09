@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NguoiDung, San, DanhGiaSan, HuongDan
+from .models import NguoiDung, San, DanhGiaSan, HuongDan, DatSan
 
 @admin.register(NguoiDung)
 class NguoiDungAdmin(admin.ModelAdmin):
@@ -20,4 +20,9 @@ class DanhGiaSanAdmin(admin.ModelAdmin):
 class HuongDanAdmin(admin.ModelAdmin):
     list_display = ['tieu_de', 'thoi_gian_tao', 'nguoi_tao', 'cap_do']
     search_fields = ['tieu_de', 'noi_dung', 'nguoi_tao__ho_ten']
+
+@admin.register(DatSan)
+class DatSanAdmin(admin.ModelAdmin):
+    list_display = ['san_id', 'nguoi_dung_id', 'thoi_gian_dat', 'thoi_gian_bat_dau', 'thoi_gian_ket_thuc', 'so_luong_san', 'tong_tien']
+    search_fields = ['san_id__ten_san', 'nguoi_dung_id__ho_ten']
 
