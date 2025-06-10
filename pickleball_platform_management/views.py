@@ -34,6 +34,16 @@ class DatSanViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         dat_san = serializer.save()
         tinh_tien_dat_san(dat_san.id)
+        dat_san.refresh_from_db()
+        return dat_san
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+   
+        instance = self.get_queryset().get(pk=response.data['id'])
+        serializer = self.get_serializer(instance)
+        response.data.update(serializer.data)
+        return response
 
     def perform_update(self, serializer):
         dat_san = serializer.save()

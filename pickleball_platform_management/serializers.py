@@ -2,11 +2,37 @@ from rest_framework import serializers
 from .models import NguoiDung, San, DanhGiaSan, HuongDan, DatSan
 
 class NguoiDungSerializer(serializers.ModelSerializer):
+    def validate_so_dien_thoai(self, value):
+        if self.instance:
+            if NguoiDung.objects.filter(so_dien_thoai=value).exclude(pk=self.instance.pk).exists():
+                raise serializers.ValidationError("Số điện thoại này đã được sử dụng.")
+        else:
+            if NguoiDung.objects.filter(so_dien_thoai=value).exists():
+                raise serializers.ValidationError("Số điện thoại này đã được sử dụng.")
+        return value
+
     class Meta:
         model = NguoiDung
         exclude = ['vai_tro']
+        extra_kwargs = {
+            'so_dien_thoai': {
+                'error_messages': {
+                    'unique': 'Số điện thoại này đã được sử dụng.'
+                }
+            }
+        }
 
 class SanSerializer(serializers.ModelSerializer):
+    def validate(self, data):
+        gio_mo_cua = data.get('gio_mo_cua')
+        gio_dong_cua = data.get('gio_dong_cua')
+        import datetime
+        if gio_mo_cua is not None and gio_dong_cua is not None:
+            if gio_mo_cua < datetime.time(5, 0) or gio_dong_cua > datetime.time(23, 0):
+                raise serializers.ValidationError("Giờ hoạt động phải trong khoảng 5 giờ đến 23 giờ.")
+            if gio_mo_cua >= gio_dong_cua:
+                raise serializers.ValidationError("Giờ mở cửa phải trước giờ đóng cửa.")
+        return data
     class Meta:
         model = San
         fields = '__all__'

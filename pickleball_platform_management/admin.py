@@ -8,8 +8,8 @@ class NguoiDungAdmin(admin.ModelAdmin):
 
 @admin.register(San)
 class SanAdmin(admin.ModelAdmin):
-    list_display = ['ten_san', 'dia_diem', 'gia_thue_theo_gio', 'so_san_con', 'gio_mo_cua', 'gio_dong_cua']
-    search_fields = ['ten_san', 'dia_diem']
+    list_display = ['ten_san', 'dia_chi', 'gia_thue_theo_gio', 'so_san_con', 'gio_mo_cua', 'gio_dong_cua']
+    search_fields = ['ten_san', 'dia_chi']
 
 @admin.register(DanhGiaSan)
 class DanhGiaSanAdmin(admin.ModelAdmin):
