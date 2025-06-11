@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 from django.core.exceptions import ValidationError
 
@@ -32,7 +31,7 @@ class NguoiDung(models.Model):
 
 class San(models.Model):
     ten_san = models.CharField(max_length=100)
-    dia_chi = models.CharField(max_length=255, unique=True)
+    dia_chi_cu_the = models.CharField(max_length=255, unique=True)
     gia_thue_theo_gio = models.DecimalField(max_digits=10, decimal_places=2)
     mo_ta = models.TextField(blank=True, null=True)
     so_san_con = models.PositiveIntegerField()

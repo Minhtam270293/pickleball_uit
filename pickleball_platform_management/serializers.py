@@ -2,6 +2,13 @@ from rest_framework import serializers
 from .models import NguoiDung, San, DanhGiaSan, HuongDan, DatSan
 
 class NguoiDungSerializer(serializers.ModelSerializer):
+    ngay_sinh = serializers.DateField(
+        required=False,
+        allow_null=True,
+        error_messages={
+            'invalid': 'Ngày sinh phải đúng định dạng YYYY-MM-DD.'
+        }
+    )
     def validate_so_dien_thoai(self, value):
         if self.instance:
             if NguoiDung.objects.filter(so_dien_thoai=value).exclude(pk=self.instance.pk).exists():
@@ -23,6 +30,15 @@ class NguoiDungSerializer(serializers.ModelSerializer):
         }
 
 class SanSerializer(serializers.ModelSerializer):
+    doanh_thu = serializers.DecimalField(max_digits=15, decimal_places=2, read_only=True, required=False)
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get('request')
+        if request and request.resolver_match and request.resolver_match.url_name != 'san-revenue':
+            rep.pop('doanh_thu', None)
+        return rep
+
     def validate(self, data):
         gio_mo_cua = data.get('gio_mo_cua')
         gio_dong_cua = data.get('gio_dong_cua')
